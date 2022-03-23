@@ -45,12 +45,7 @@ export function SignIn(props) {
                 はじめる
               </button>
               <div className="mt-4 text-center text-gray-400">
-                {`Copyright © `}
-                <Link href="https://www.udemy.com/course/react-firebase/learn/lecture/22616990#content">
-                  <a target="_blank" rel="noopener">
-                    masayuki
-                  </a>
-                </Link>
+                {`Copyright © masayuki`}
               </div>
             </div>
           </form>
