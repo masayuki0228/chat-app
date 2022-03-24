@@ -3,6 +3,10 @@ import { useState } from "react";
 
 export function SignIn(props) {
   const [string, setString] = useState("");
+  const [isComposed, setIsComposed] = useState(false);
+
+  console.log({ string, isComposed });
+
   return (
     <>
       <Head>
@@ -28,10 +32,17 @@ export function SignIn(props) {
                   placeholder="ニックネーム"
                   onChange={(e) => setString(e.target.value)}
                   onKeyDown={(e) => {
+                    if (isComposed) return;
                     if (e.key === "Enter") {
                       props.setName(string);
                       e.preventDefault();
                     }
+                  }}
+                  onCompositionStart={() => {
+                    setIsComposed(true);
+                  }}
+                  onCompositionEnd={() => {
+                    setIsComposed(false);
                   }}
                 />
               </div>
