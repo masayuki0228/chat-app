@@ -7,6 +7,7 @@ export function Main(props) {
         <title>Main</title>
       </Head>
       {props.name}
+      aaa
     </div>
   );
 }
