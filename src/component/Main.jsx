@@ -8,7 +8,7 @@ export function Main(props) {
       <Head>
         <title>Main</title>
       </Head>
-      <div>
+      <div className="grid grid-rows-1 h-screen">
         <MessageList />
         <MessageInputField name={props.name}/>
       </div>
