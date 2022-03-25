@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { MessageInputField } from "src/component/MessageInputField";
+import { MessageList } from "src/component/MessageList";
 
 export function Main(props) {
   return (
@@ -6,8 +8,10 @@ export function Main(props) {
       <Head>
         <title>Main</title>
       </Head>
-      {props.name}
-      aaa
+      <div>
+        <MessageList />
+        <MessageInputField name={props.name}/>
+      </div>
     </div>
   );
 }
