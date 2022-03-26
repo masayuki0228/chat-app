@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { MessageField } from "src/component/MessageField";
+import { MessageSubmitButton } from "src/component/MessageSubmitButton";
 
 export function MessageInputField(props) {
   const [text, setText] = useState("");
@@ -12,7 +13,9 @@ export function MessageInputField(props) {
       <div className="col-start-2 col-span-8">
         <MessageField name={props.name} text={text} setText={setText} />
       </div>
-      <div className="col-start-10 col-span-1">send</div>
+      <div className="col-start-10 col-span-1">
+        <MessageSubmitButton name={props.name} text={text} setText={setText} />
+      </div>
     </div>
   );
 }
