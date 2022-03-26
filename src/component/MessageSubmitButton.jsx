@@ -10,6 +10,7 @@ export function MessageSubmitButton(props) {
           onClick={() => {
             pushMessage({ name: "まさ", text: props.text });
             props.setText("");
+            props.inputEl.current.focus();
           }}
         >
           <Image src="/send.svg" alt="send" width={30} height={30} />
