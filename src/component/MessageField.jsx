@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { pushMessage } from "src/firebase";
 
 export function MessageField(props) {
   const [isComposed, setIsComposed] = useState(false);
@@ -13,7 +14,7 @@ export function MessageField(props) {
         if (e.target.value === "") return;
         if (isComposed) return;
         if (e.key === "Enter") {
-          console.log("fire");
+          pushMessage({ name: "まさ", text: props.text });
           props.setText("");
           e.preventDefault();
         }
