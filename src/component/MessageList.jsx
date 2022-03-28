@@ -20,7 +20,7 @@ export function MessageList() {
   }, []);
   console.log(messages);
   return (
-    <ul>
+    <ul className="overflow-auto">
       {messages.map((message) => {
         return (
           <li key={message.key} className="m-4 grid grid-cols-10">
