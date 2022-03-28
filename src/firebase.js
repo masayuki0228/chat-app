@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push } from "firebase/database";
+import { getDatabase, ref, push, orderByKey } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBOhpU1FpKKVMLGUpPhIzzE9Pta71VFKvc",
@@ -13,7 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
-const messageRef = ref(db, "messages");
+export const messageRef = ref(db, "messages", orderByKey());
 
 export const pushMessage = ({ name, text }) => {
   push(messageRef, { name, text });
