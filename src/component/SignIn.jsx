@@ -5,8 +5,6 @@ export function SignIn(props) {
   const [string, setString] = useState("");
   const [isComposed, setIsComposed] = useState(false);
 
-  console.log({ string, isComposed });
-
   return (
     <>
       <Head>

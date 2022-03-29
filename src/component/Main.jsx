@@ -19,7 +19,6 @@ export function Main(props) {
       <Head>
         <title>Main</title>
       </Head>
-      {/* <div className="grid grid-rows-1 min-h-screen"> */}
       <div className={styles.main}>
         <MessageList />
         <MessageInputField name={props.name} />
