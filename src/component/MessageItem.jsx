@@ -9,7 +9,7 @@ export function MessageItem(props) {
     }
   }, [props.isLastItem]);
   return (
-    <li className="m-4 grid grid-cols-10" ref={ref}>
+    <li className="p-4 grid grid-cols-10 border-b" ref={ref}>
       <Image
         src="/message.svg"
         alt="messageIcon"

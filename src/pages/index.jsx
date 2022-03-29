@@ -5,7 +5,6 @@ import jsconfig from "jsconfig.json";
 
 export default function Index() {
   const [name, setName] = useState("");
-  console.log(name);
   if (jsconfig.signInEnabled && name === "") {
     return <SignIn setName={setName} />;
   } else {
