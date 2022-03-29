@@ -8,7 +8,7 @@ export function MessageSubmitButton(props) {
         <button
           disabled={props.text === ""}
           onClick={() => {
-            pushMessage({ name: "まさ", text: props.text });
+            pushMessage({ name: props.name, text: props.text });
             props.setText("");
             props.inputEl.current.focus();
           }}

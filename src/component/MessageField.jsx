@@ -15,7 +15,7 @@ export function MessageField(props) {
         if (e.target.value === "") return;
         if (isComposed) return;
         if (e.key === "Enter") {
-          pushMessage({ name: "まさ", text: props.text });
+          pushMessage({ name: props.name, text: props.text });
           props.setText("");
           e.preventDefault();
         }
