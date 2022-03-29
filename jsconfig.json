@@ -3,5 +3,5 @@
     "jsx": "react",
     "baseUrl": "."
   },
-  "signInEnabled": false
+  "signInEnabled": true
 }
