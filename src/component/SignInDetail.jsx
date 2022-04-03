@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 
-export function SignIn(props) {
+export function SignInDetail(props) {
   const [string, setString] = useState("");
   const [isComposed, setIsComposed] = useState(false);
 
