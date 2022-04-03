@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useRecoilValue } from "recoil";
 import { pushMessage } from "src/firebase";
+import { userState } from "src/store/userState";
 
 export function MessageField(props) {
   const [isComposed, setIsComposed] = useState(false);
+  const name = useRecoilValue(userState);
 
   return (
     <input
@@ -13,7 +16,7 @@ export function MessageField(props) {
         if (e.target.value === "") return;
         if (isComposed) return;
         if (e.key === "Enter") {
-          pushMessage({ name: props.name, text: props.text });
+          pushMessage({ name, text: props.text });
           props.setText("");
           e.preventDefault();
         }
