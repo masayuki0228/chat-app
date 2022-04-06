@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { MessageField } from "src/component/MessageField";
 import { MessageSubmitButton } from "src/component/MessageSubmitButton";
 
-export function MessageInputField(props) {
+export function MessageInputField() {
   const [text, setText] = useState("");
   const inputEl = useRef(null);
 
@@ -14,7 +14,6 @@ export function MessageInputField(props) {
       </div>
       <div className="col-start-2 col-span-8">
         <MessageField
-          name={props.name}
           text={text}
           setText={setText}
           inputEl={inputEl}
@@ -22,7 +21,6 @@ export function MessageInputField(props) {
       </div>
       <div className="col-start-10 col-span-1">
         <MessageSubmitButton
-          name={props.name}
           text={text}
           setText={setText}
           inputEl={inputEl}

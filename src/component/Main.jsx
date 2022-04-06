@@ -13,7 +13,7 @@ if (typeof window !== "undefined") {
   setHeight();
   window.addEventListener("resize", setHeight);
 }
-export function Main(props) {
+export function Main() {
   return (
     <div>
       <Head>
@@ -21,7 +21,7 @@ export function Main(props) {
       </Head>
       <div className={styles.main}>
         <MessageList />
-        <MessageInputField name={props.name} />
+        <MessageInputField />
       </div>
     </div>
   );
