@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { userState } from "src/store/userState";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export function SignInDetail() {
   const [isComposed, setIsComposed] = useState(false);
@@ -64,7 +65,19 @@ export function SignInDetail() {
                 はじめる
               </button>
               <div className="mt-4 text-center text-gray-400">
-                {`Copyright © masayuki`}
+                <p>
+                  お好きなニックネームでログインの上
+                  <br />
+                  是非チャット機能をお試しください。
+                </p>
+                <p className="mt-4">Copyright © masayuki</p>
+                <a
+                  href="https://github.com/masayuki0228/chat-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon />
+                </a>
               </div>
             </div>
           </form>
